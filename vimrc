@@ -41,6 +41,7 @@ let mapleader = " "
 syntax enable
 set background=dark
 colorscheme solarized
+set wildmenu " when opening a file with e.g. :e ~/.vim<TAB> there is a graphical menu of all the matches
 
 " Numbers
 set number
@@ -61,6 +62,7 @@ set smartindent
 " Tab Options
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2 " Number of spaces a tab counts when editing
 set expandtab
 
 " Delete empty space from the end of lines on every save
