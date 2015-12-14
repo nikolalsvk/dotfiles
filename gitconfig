@@ -1,0 +1,49 @@
+#[user]
+#  name  = YOUR_NAME
+#  email = YOUR_EMAIL
+
+[credential]
+  helper = GIT_CREDENTIAL_HELPER
+
+[alias]
+  a    = add
+  all  = add -A
+  st   = status -sb
+  ci   = commit -m
+  ca   = commit --amend
+  br   = branch
+  co   = checkout
+  df   = diff
+  dfc  = diff --cached
+  lg   = log --pretty=format:'%C(yellow)%h%Creset %Cgreen(%><(12)%cr%><|(12))%Creset - %s %C(blue)<%an>%Creset'
+  pl   = pull
+  ps   = push
+  undo =  reset --soft HEAD^
+
+[color]
+  diff   = auto
+  status = auto
+  branch = auto
+  ui     = true
+
+[core]
+  excludesfile = ~/.gitignore
+  editor       = vim
+
+[apply]
+  whitespace = nowarn
+
+[mergetool]
+  keepBackup = false
+
+[difftool]
+  prompt = false
+
+[help]
+  autocorrect = 1
+
+[pull]
+  default = current
+
+[push]
+  default = current
