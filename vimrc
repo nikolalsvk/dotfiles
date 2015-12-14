@@ -77,6 +77,14 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Ignore case when searching
+set ignorecase
+" When searching try to be smart about cases
+set smartcase
+
+" Always show the status line
+set laststatus=2
+
 " set correct filetypes for various languages
 au BufRead,BufNewFile *.go setlocal filetype=go
 au BufRead,BufNewFile *.cap setlocal filetype=ruby
@@ -96,8 +104,14 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column  --ignore-dir={.bundle,ve
 nnoremap F :Ack "\b<cword>\b"<CR>
 
 " Shortcuts
+" Open Buffer
 nnoremap <silent><leader>l :BufExplorer<CR>
+" Open test file for a file that your are reading
 nnoremap <silent><leader>s :A<CR>
 nnoremap <silent><leader>v :AV<CR>
+" Vertically split screen
 nnoremap <silent><leader>\ :vs<CR>
+" Split screen
 nnoremap <silent><leader>- :split<CR>
+" Faster saving
+nmap <leader>w :w!<cr>
