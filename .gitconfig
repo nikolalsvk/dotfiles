@@ -1,6 +1,6 @@
 #[user]
-#  name  = YOUR_NAME
-#  email = YOUR_EMAIL
+  name  = nikolasvk
+  email = nikolaseap@gmail.com
 
 [credential]
   helper = GIT_CREDENTIAL_HELPER

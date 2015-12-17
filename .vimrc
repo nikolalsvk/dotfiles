@@ -30,6 +30,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'thisivan/vim-bufexplorer'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
@@ -59,6 +60,12 @@ map <Right> :echo "no! use l!"<cr>
 set autoindent
 set cindent
 set smartindent
+
+" Folding
+set nofoldenable " disable folding
+
+" Disable all bells and whistles
+set noerrorbells visualbell t_vb=
 
 " Tab Options
 set shiftwidth=2
