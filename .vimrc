@@ -50,11 +50,20 @@ set number
 set numberwidth=4
 set ruler
 
+" paste mode
+nnoremap <F5> :set invpaste paste?<CR>
+set pastetoggle=<F5>
+set showmode
+
 " disable cursor keys in normal mode
 map <Left>  :echo "no! use h!"<cr>
 map <Down>  :echo "no! use j!"<cr>
 map <Up>    :echo "no! use k!"<cr>
 map <Right> :echo "no! use l!"<cr>
+
+" Treat long lines as break lines
+map j gj
+map k gk
 
 " Indentation
 set autoindent
