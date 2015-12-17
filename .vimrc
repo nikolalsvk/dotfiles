@@ -30,6 +30,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'thisivan/vim-bufexplorer'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,7 +41,7 @@ let mapleader = " "
 " Look and Feel settings
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme base16-eighties
 set wildmenu " when opening a file with e.g. :e ~/.vim<TAB> there is a graphical menu of all the matches
 
 " Numbers
@@ -113,5 +114,15 @@ nnoremap <silent><leader>v :AV<CR>
 nnoremap <silent><leader>\ :vs<CR>
 " Split screen
 nnoremap <silent><leader>- :split<CR>
-" Faster saving
-nmap <leader>w :w!<cr>
+
+" Faster saving and exiting
+nnoremap <silent><leader>w :w!<CR>
+nnoremap <silent><leader>q :q!<CR>
+nnoremap <silent><leader>x :x<CR>
+nnoremap <silent><leader>1 :source ~/.vimrc \| :PluginInstall<CR>
+
+" Easier movement between split windows CTRL + {h, j, k, l}
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
