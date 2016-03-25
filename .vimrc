@@ -33,6 +33,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'chriskempson/base16-vim'
 Plugin 'ervandew/supertab'
+Plugin 'isRuslan/vim-es6'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,7 +44,6 @@ let mapleader = " "
 " Look and Feel settings
 syntax enable
 set background=dark
-colorscheme base16-eighties
 set wildmenu " when opening a file with e.g. :e ~/.vim<TAB> there is a graphical menu of all the matches
 
 " Numbers
