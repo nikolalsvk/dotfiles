@@ -34,11 +34,13 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'chriskempson/base16-vim'
 Plugin 'ervandew/supertab'
 Plugin 'isRuslan/vim-es6'
+Plugin 'claco/jasmine.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" Leader key is SPACE, I find it the best
 let mapleader = " "
 
 " Look and Feel settings
