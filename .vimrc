@@ -79,6 +79,10 @@ set nofoldenable " disable folding
 " Disable all bells and whistles
 set noerrorbells visualbell t_vb=
 
+" Ack tricks
+nmap <leader>a :Ack ""<Left>
+nmap <leader>A :Ack <C-r><C-w><CR>
+
 " Tab Options
 set shiftwidth=2
 set tabstop=2
