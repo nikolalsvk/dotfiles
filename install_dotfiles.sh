@@ -8,6 +8,13 @@ else
   echo "You already have Vundle, awesome!"
 fi
 
+echo "Checking if zsh is installed"
+if [ ! -n "$ZSH_VERSION" ]; then
+  echo "Nope, installing zsh"
+  sudo apt-get install zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Copying $DIR/.vimrc to ~/.vimrc"
