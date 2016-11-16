@@ -35,6 +35,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'ervandew/supertab'
 Plugin 'isRuslan/vim-es6'
 Plugin 'claco/jasmine.vim'
+Plugin 'elixir-lang/vim-elixir'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -80,8 +81,9 @@ set nofoldenable " disable folding
 set noerrorbells visualbell t_vb=
 
 " Ack tricks
+let g:ackprg="ack-grep -H --nocolor --nogroup --column  --ignore-dir={.bundle,vendor/bundle,.git} --ignore-file=is:tags"
 nmap <leader>a :Ack ""<Left>
-nmap <leader>A :Ack <C-r><C-w><CR>
+nmap <leader>A :Ack "\b<cword>\b"<CR>
 
 " Tab Options
 set shiftwidth=2
@@ -121,11 +123,6 @@ au BufRead,BufNewFile *.feature setlocal spell
 
 " Delete characters outside of insert area
 set backspace=indent,eol,start
-
-" Ack vim
-let g:ackprg="ack-grep -H --nocolor --nogroup --column  --ignore-dir={.bundle,vendor/bundle,.git} --ignore-file=is:tags"
-" Search word under cursor
-nnoremap F :Ack "\b<cword>\b"<CR>
 
 " Shortcuts
 " Open Buffer
