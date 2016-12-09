@@ -107,6 +107,8 @@ set noswapfile
 set ignorecase
 " When searching try to be smart about cases
 set smartcase
+" Highlight search term
+set hlsearch
 
 " Always show the status line
 set laststatus=2
