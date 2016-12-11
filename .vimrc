@@ -109,6 +109,8 @@ set ignorecase
 set smartcase
 " Highlight search term
 set hlsearch
+" Jumping search
+set incsearch
 
 " Always show the status line
 set laststatus=2
