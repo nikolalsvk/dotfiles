@@ -108,7 +108,7 @@ set ignorecase
 " When searching try to be smart about cases
 set smartcase
 " Highlight search term
-set hlsearch
+set nohlsearch
 " Jumping search
 set incsearch
 
