@@ -107,7 +107,7 @@ set noswapfile
 set ignorecase
 " When searching try to be smart about cases
 set smartcase
-" Highlight search term
+" Don't highlight search term
 set nohlsearch
 " Jumping search
 set incsearch

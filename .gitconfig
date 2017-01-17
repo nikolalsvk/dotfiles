@@ -18,7 +18,10 @@
   lg   = log --pretty=format:'%C(yellow)%h%Creset %Cgreen(%><(12)%cr%><|(12))%Creset - %s %C(blue)<%an>%Creset'
   pl   = pull
   ps   = push
-  undo =  reset --soft HEAD^
+  undo = reset --soft HEAD^
+  sta  = stash
+  stap = stash apply
+  uall = reset .
 
 [color]
   diff   = auto
