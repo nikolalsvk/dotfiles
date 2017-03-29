@@ -59,9 +59,6 @@ nnoremap <F5> :set invpaste paste?<CR>
 set pastetoggle=<F5>
 set showmode
 
-" make netrw use the tree view by default
-let g:netrw_liststyle=3
-
 " disable cursor keys in normal mode
 map <Left>  :echo "no! use h!"<cr>
 map <Down>  :echo "no! use j!"<cr>
