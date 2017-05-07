@@ -1,6 +1,6 @@
 # nikolalsvk dotfiles
 
-![Vim pic](https://lh3.googleusercontent.com/drKlJhnSYoHZzDLjCtsI8uuoxGVD7lSg-X4Fgf4Rs3zBs5IatcfvJQQx0GT8vGQTyo1-XjpXkxHJlEI=w1761-h1006)
+![Vim pic](https://vim.sexy/img/Vimlogo.svg)
 
 ![Git pic](https://git-scm.com/images/logo@2x.png)
 
