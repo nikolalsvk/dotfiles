@@ -1,11 +1,9 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible " be iMproved, required
+filetype off     " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -13,29 +11,23 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
-Plugin 'renderedtext/vim-bdd'
-Plugin 'kien/ctrlp.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-cucumber'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-commentary'
-Plugin 'mileszs/ack.vim'
-Plugin 'thisivan/vim-bufexplorer'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'chriskempson/base16-vim'
-Plugin 'ervandew/supertab'
-Plugin 'isRuslan/vim-es6'
-Plugin 'claco/jasmine.vim'
-Plugin 'elixir-lang/vim-elixir'
+Plugin 'renderedtext/vim-bdd'     " Run Ruby and Elixir tests
+Plugin 'kien/ctrlp.vim'           " Fuzzy search
+Plugin 'airblade/vim-gitgutter'   " Show git diff of lines edited
+Plugin 'powerline/powerline'      " Vim powerline
+Plugin 'tpope/vim-rails'          " Rails plugin
+Plugin 'tpope/vim-cucumber'       " Open Cucumber step definitions
+Plugin 'tpope/vim-fugitive'       " :Gblame
+Plugin 'tpope/vim-endwise'        " Autocomplete end after a do
+Plugin 'tpope/vim-repeat'         " Expand . functionality
+Plugin 'tpope/vim-commentary'     " Comment out code
+Plugin 'mileszs/ack.vim'          " Use ack in Vim
+Plugin 'thisivan/vim-bufexplorer' " Explore buffer
+Plugin 'plasticboy/vim-markdown'  " Markdown syntax
+Plugin 'ervandew/supertab'        " Complete using <Tab>
+Plugin 'isRuslan/vim-es6'         " ES6 syntax
+Plugin 'claco/jasmine.vim'        " Jasmine syntax
+Plugin 'elixir-lang/vim-elixir'   " Elixir syntax
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -81,7 +73,7 @@ set nofoldenable " disable folding
 set noerrorbells visualbell t_vb=
 
 " Ack tricks
-let g:ackprg="ack-grep -H --nocolor --nogroup --column  --ignore-dir={.bundle,vendor/bundle,.git} --ignore-file=is:tags"
+let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir={.bundle,vendor/bundle,.git} --ignore-file=is:tags"
 nmap <leader>a :Ack ""<Left>
 nmap <leader>A :Ack "\b<cword>\b"<CR>
 
