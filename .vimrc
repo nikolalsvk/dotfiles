@@ -95,14 +95,10 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" Ignore case when searching
-set ignorecase
-" When searching try to be smart about cases
-set smartcase
-" Don't highlight search term
-set nohlsearch
-" Jumping search
-set incsearch
+set ignorecase " Ignore case when searching
+set smartcase  " When searching try to be smart about cases
+set nohlsearch " Don't highlight search term
+set incsearch  " Jumping search
 
 " Always show the status line
 set laststatus=2
@@ -123,8 +119,9 @@ set backspace=indent,eol,start
 " Shortcuts
 " Open Buffer
 nnoremap <silent><leader>l :BufExplorer<CR>
-" Open test file for a file that your are reading
+" Open test file for a current file
 nnoremap <silent><leader>s :A<CR>
+" Open test file for a current file in a vertical window
 nnoremap <silent><leader>v :AV<CR>
 " Vertically split screen
 nnoremap <silent><leader>\ :vs<CR>
