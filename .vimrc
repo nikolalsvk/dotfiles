@@ -15,7 +15,7 @@ Plugin 'renderedtext/vim-bdd'     " Run Ruby and Elixir tests
 Plugin 'kien/ctrlp.vim'           " Fuzzy search
 Plugin 'airblade/vim-gitgutter'   " Show git diff of lines edited
 Plugin 'powerline/powerline'      " Vim powerline
-Plugin 'tpope/vim-rails'          " Rails plugin
+Plugin 'nikolalsvk/vim-rails'     " Rails plugin
 Plugin 'tpope/vim-cucumber'       " Open Cucumber step definitions
 Plugin 'tpope/vim-fugitive'       " :Gblame
 Plugin 'tpope/vim-endwise'        " Autocomplete end after a do
