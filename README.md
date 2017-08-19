@@ -7,6 +7,6 @@
 It includes:
  - `.vimrc`, a config file for Vim file editor
  - `.gitconfig`, a config file for Git CLI
- - `.install_dotfiles`, bash script for installing those files
+ - `install`, bash script for installing those files
 
 Use it at your own risk. Pull request are welcome :)
