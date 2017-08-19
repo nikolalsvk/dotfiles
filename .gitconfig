@@ -22,6 +22,7 @@
   sta  = stash
   stap = stash apply
   uall = reset .
+  sync = !git pull origin master && git push nikolalsvk master
 
 [color]
   diff   = auto
