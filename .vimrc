@@ -28,6 +28,7 @@ Plugin 'ervandew/supertab'        " Complete using <Tab>
 Plugin 'isRuslan/vim-es6'         " ES6 syntax
 Plugin 'claco/jasmine.vim'        " Jasmine syntax
 Plugin 'elixir-lang/vim-elixir'   " Elixir syntax
+Plugin 'prettier/vim-prettier'    " Code formatter
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
