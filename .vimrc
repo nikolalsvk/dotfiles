@@ -11,23 +11,24 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
-Plugin 'renderedtext/vim-bdd'       " Run Ruby and Elixir tests
-Plugin 'kien/ctrlp.vim'             " Fuzzy search
-Plugin 'airblade/vim-gitgutter'     " Show git diff of lines edited
-Plugin 'vim-airline/vim-airline'    " Vim powerline
-Plugin 'nikolalsvk/vim-rails'       " Rails plugin
-Plugin 'tpope/vim-cucumber'         " Open Cucumber step definitions
-Plugin 'tpope/vim-fugitive'         " :Gblame
-Plugin 'tpope/vim-endwise'          " Autocomplete end after a do
-Plugin 'tpope/vim-repeat'           " Expand . functionality
-Plugin 'tpope/vim-commentary'       " Comment out code
-Plugin 'mileszs/ack.vim'            " Use ack in Vim
-Plugin 'thisivan/vim-bufexplorer'   " Explore buffer
-Plugin 'plasticboy/vim-markdown'    " Markdown syntax
-Plugin 'ervandew/supertab'          " Complete using <Tab>
-Plugin 'elixir-lang/vim-elixir'     " Elixir syntax
-Plugin 'prettier/vim-prettier'      " Code formatter
-Plugin 'pangloss/vim-javascript'    " JavaScript syntax
+Plugin 'renderedtext/vim-bdd'     " Run Ruby and Elixir tests
+Plugin 'kien/ctrlp.vim'           " Fuzzy search
+Plugin 'airblade/vim-gitgutter'   " Show git diff of lines edited
+Plugin 'vim-airline/vim-airline'  " Vim powerline
+Plugin 'nikolalsvk/vim-rails'     " Rails plugin
+Plugin 'tpope/vim-cucumber'       " Open Cucumber step definitions
+Plugin 'tpope/vim-fugitive'       " :Gblame
+Plugin 'tpope/vim-endwise'        " Autocomplete end after a do
+Plugin 'tpope/vim-repeat'         " Expand . functionality
+Plugin 'tpope/vim-commentary'     " Comment out code
+Plugin 'mileszs/ack.vim'          " Use ack in Vim
+Plugin 'thisivan/vim-bufexplorer' " Explore buffer
+Plugin 'plasticboy/vim-markdown'  " Markdown syntax
+Plugin 'ervandew/supertab'        " Complete using <Tab>
+Plugin 'elixir-lang/vim-elixir'   " Elixir syntax
+Plugin 'prettier/vim-prettier'    " Code formatter
+Plugin 'pangloss/vim-javascript'  " JavaScript syntax
+Plugin 'mxw/vim-jsx'              " JSX syntax
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,6 +41,7 @@ let mapleader = " "
 syntax enable
 set background=dark
 set wildmenu " when opening a file with e.g. :e ~/.vim<TAB> there is a graphical menu of all the matches
+let g:jsx_ext_required = 0 " enable JSX syntax highlight in .js files
 
 " Numbers
 set number
