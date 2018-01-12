@@ -41,7 +41,7 @@ else
   `wget -P ~/.oh-my-zsh/themes "https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.zsh-theme"`
 end
 
-print_cyan "Copying #{Dir.home}/.vimrc to ~/.vimrc"
-`cp #{Dir.home}/.vimrc ~/.vimrc`
-print_cyan "Copying #{Dir.home}/.gitconfig to ~/.gitconfig"
-`cp #{Dir.home}/.gitconfig ~/.gitconfig`
+print_cyan "Copying .vimrc to ~/.vimrc"
+`cp .vimrc ~/.vimrc`
+print_cyan "Copying .gitconfig to ~/.gitconfig"
+`cp .gitconfig ~/.gitconfig`
