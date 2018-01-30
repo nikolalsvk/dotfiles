@@ -12,7 +12,7 @@
   ci   = commit -m
   ca   = commit --amend
   br   = branch
-  bd   = branch --delete
+  bd   = branch -D
   co   = checkout
   cb   = checkout -b
   df   = diff
