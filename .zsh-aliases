@@ -1,11 +1,7 @@
-alias bb="cd ~/boxbox && vagrant up && vagrant ssh"
-alias bhalt="cd ~/boxbox && vagrant halt"
-alias bb="cd ~/boxbox && vagrant up && vagrant ssh"
-alias bhalt="cd ~/boxbox && vagrant halt"
-
 alias be="bundle exec"
 alias bec="bundle exec rails c"
 alias ber="bundle exec rails s"
+alias precompile="bundle exec rake assets:precompile"
 alias g="git"
 alias pr="hub pull-request"
 alias dc="docker-compose"
