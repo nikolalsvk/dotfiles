@@ -1,5 +1,5 @@
 [user]
-  name  = nikolalsvk
+  name  = Nikola Đuza
   email = nikolaseap@gmail.com
 
 [credential]
@@ -26,6 +26,7 @@
   stap = stash apply
   uall = reset .
   sync = !git pull origin master && git push nikolalsvk master
+  change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
 
 [color]
   diff   = auto
@@ -54,3 +55,6 @@
 
 [push]
   default = current
+
+[commit]
+  gpgsign = true
