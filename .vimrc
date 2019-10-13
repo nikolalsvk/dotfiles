@@ -1,37 +1,32 @@
 set nocompatible " be iMproved, required
 filetype off     " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Keep Plug commands between plug#begin() and plug#end().
+call plug#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-
-Plugin 'renderedtext/vim-bdd'     " Run Ruby and Elixir tests
-Plugin 'kien/ctrlp.vim'           " Fuzzy search
-Plugin 'airblade/vim-gitgutter'   " Show git diff of lines edited
-Plugin 'vim-airline/vim-airline'  " Vim powerline
-Plugin 'nikolalsvk/vim-rails'     " Rails plugin
-Plugin 'tpope/vim-cucumber'       " Open Cucumber step definitions
-Plugin 'tpope/vim-fugitive'       " :Gblame
-Plugin 'tpope/vim-endwise'        " Autocomplete end after a do
-Plugin 'tpope/vim-repeat'         " Expand . functionality
-Plugin 'tpope/vim-commentary'     " Comment out code
-Plugin 'mileszs/ack.vim'          " Use ack in Vim
-Plugin 'thisivan/vim-bufexplorer' " Explore buffer
-Plugin 'plasticboy/vim-markdown'  " Markdown syntax
-Plugin 'ervandew/supertab'        " Complete using <Tab>
-Plugin 'elixir-lang/vim-elixir'   " Elixir syntax
-Plugin 'prettier/vim-prettier'    " Code formatter
-Plugin 'pangloss/vim-javascript'  " JavaScript syntax
-Plugin 'mxw/vim-jsx'              " JSX syntax
+Plug 'renderedtext/vim-bdd'     " Run Ruby and Elixir tests
+Plug 'kien/ctrlp.vim'           " Fuzzy search
+Plug 'airblade/vim-gitgutter'   " Show git diff of lines edited
+Plug 'vim-airline/vim-airline'  " Vim powerline
+Plug 'nikolalsvk/vim-rails'     " Rails plugin
+Plug 'tpope/vim-cucumber'       " Open Cucumber step definitions
+Plug 'tpope/vim-fugitive'       " :Gblame
+Plug 'tpope/vim-endwise'        " Autocomplete end after a do
+Plug 'tpope/vim-repeat'         " Expand . functionality
+Plug 'tpope/vim-commentary'     " Comment out code
+Plug 'mileszs/ack.vim'          " Use ack in Vim
+Plug 'thisivan/vim-bufexplorer' " Explore buffer
+Plug 'plasticboy/vim-markdown'  " Markdown syntax
+Plug 'ervandew/supertab'        " Complete using <Tab>
+Plug 'elixir-lang/vim-elixir'   " Elixir syntax
+Plug 'prettier/vim-prettier'    " Code formatter
+Plug 'pangloss/vim-javascript'  " JavaScript syntax
+Plug 'mxw/vim-jsx'              " JSX syntax
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'         " Set up fzf and fzf.vim
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()              " required
 filetype plugin indent on    " required
 
 " Leader key is SPACE, I find it the best
@@ -104,11 +99,6 @@ set incsearch  " Jumping search
 " Always show the status line
 set laststatus=2
 
-" set correct filetypes for various languages
-au BufRead,BufNewFile *.go setlocal filetype=go
-au BufRead,BufNewFile *.cap setlocal filetype=ruby
-au BufRead,BufNewFile Capfile* setlocal filetype=ruby
-
 " Spellcheck for features and markdown
 au BufRead,BufNewFile *.md setlocal spell
 au BufRead,BufNewFile *.md.erb setlocal spell
@@ -133,7 +123,7 @@ nnoremap <silent><leader>- :split<CR>
 nnoremap <silent><leader>w :w!<CR>
 nnoremap <silent><leader>q :q!<CR>
 nnoremap <silent><leader>x :x<CR>
-nnoremap <silent><leader>1 :source ~/.vimrc \| :PluginInstall<CR>
+nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>
 " Extra <CR> is for disabling /"Press ENTER or type command to continue/"
 nnoremap <silent><leader>e :Exp<CR><CR>
 
