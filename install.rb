@@ -16,12 +16,21 @@ def path(filepath)
   File.expand_path(filepath)
 end
 
-print_cyan "Checking if Vundle exists..."
-if Dir.exists? path("~/.vim/bundle/Vundle.vim")
-  print_green "You already have Vundle, awesome!"
+print_cyan "Checking if vim-plug exists..."
+if File.exists? path("~/.vim/autoload/plug.vim")
+  print_green "You already have vim-plug, awesome!"
 else
-  print_red "Nope, installing Vundle"
-  `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+  print_red "Nope, installing vim-plug"
+  `curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
+end
+
+print_cyan "Checking if ag exists..."
+if Dir.exists? path("/usr/local/Cellar/the_silver_searcher/")
+  print_green "You already have ag, awesome!"
+else
+  print_red "Nope, installing ag"
+  `brew install the_silver_searcher`
 end
 
 print_cyan "Checking if zsh is installed"
