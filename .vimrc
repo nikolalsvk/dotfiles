@@ -5,7 +5,6 @@ filetype off     " required
 call plug#begin()
 
 Plug 'renderedtext/vim-bdd'     " Run Ruby and Elixir tests
-Plug 'kien/ctrlp.vim'           " Fuzzy search
 Plug 'airblade/vim-gitgutter'   " Show git diff of lines edited
 Plug 'vim-airline/vim-airline'  " Vim powerline
 Plug 'nikolalsvk/vim-rails'     " Rails plugin
@@ -13,7 +12,6 @@ Plug 'tpope/vim-cucumber'       " Open Cucumber step definitions
 Plug 'tpope/vim-fugitive'       " :Gblame
 Plug 'tpope/vim-endwise'        " Autocomplete end after a do
 Plug 'tpope/vim-repeat'         " Expand . functionality
-Plug 'tpope/vim-commentary'     " Comment out code
 Plug 'mileszs/ack.vim'          " Use ack in Vim
 Plug 'thisivan/vim-bufexplorer' " Explore buffer
 Plug 'plasticboy/vim-markdown'  " Markdown syntax
@@ -69,7 +67,7 @@ nmap z za
 set noerrorbells visualbell t_vb=
 
 " Ack tricks
-let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir={.bundle,vendor/bundle,.git,node_modules} --ignore-file=is:tags"
+let g:ackprg = 'ag --vimgrep'
 nmap <leader>a :Ack ""<Left>
 nmap <leader>A :Ack "\b<cword>\b"<CR>
 
@@ -107,7 +105,7 @@ au BufRead,BufNewFile *.feature setlocal spell
 " Delete characters outside of insert area
 set backspace=indent,eol,start
 
-" Shortcuts
+" +++ Shortcuts +++
 " Open Buffer
 nnoremap <silent><leader>l :BufExplorer<CR>
 " Open test file for a current file
@@ -124,6 +122,11 @@ nnoremap <silent><leader>w :w!<CR>
 nnoremap <silent><leader>q :q!<CR>
 nnoremap <silent><leader>x :x<CR>
 nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>
+
+" Map fzf to CTRL P
+nnoremap <C-p> :Files<Cr>
+nnoremap <C-g> :Ag<Cr>
+
 " Extra <CR> is for disabling /"Press ENTER or type command to continue/"
 nnoremap <silent><leader>e :Exp<CR><CR>
 
