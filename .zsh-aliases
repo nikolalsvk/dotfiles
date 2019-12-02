@@ -1,11 +1,29 @@
+# Rails
 alias be="bundle exec"
 alias bec="bundle exec rails c"
 alias ber="bundle exec rails s"
 alias s="spring"
 alias precompile="bundle exec rake assets:precompile"
+
+# Git
 alias g="git"
 alias pr="hub pull-request"
+
+# Docker
 alias dc="docker-compose"
 alias k="kubectl"
-alias ack-grep="ack"
+
+# JS
 alias cy="yarn cy:open"
+
+# Utility
+alias hg='history | grep'
+
+kill_port() {
+  if [ -n "$1" ]
+  then
+    lsof -ti :"$1" | xargs kill
+  else
+    echo "Pass in port number."
+  fi
+}
