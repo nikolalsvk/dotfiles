@@ -4,20 +4,25 @@ filetype off     " required
 " Keep Plug commands between plug#begin() and plug#end().
 call plug#begin()
 
-Plug 'janko/vim-test'           " Run Ruby and Elixir tests
-Plug 'airblade/vim-gitgutter'   " Show git diff of lines edited
-Plug 'vim-airline/vim-airline'  " Vim powerline
-Plug 'nikolalsvk/vim-rails'     " Rails plugin
-Plug 'tpope/vim-cucumber'       " Open Cucumber step definitions
-Plug 'tpope/vim-fugitive'       " :Gblame
-Plug 'tpope/vim-endwise'        " Autocomplete end after a do
-Plug 'tpope/vim-repeat'         " Expand . functionality
-Plug 'mileszs/ack.vim'          " Use ack in Vim
-Plug 'ervandew/supertab'        " Complete using <Tab>
-Plug 'prettier/vim-prettier'    " Code formatter
-Plug 'pangloss/vim-javascript'  " JavaScript syntax
+Plug 'janko/vim-test'             " Run Ruby and Elixir tests
+Plug 'nikolalsvk/vim-rails'       " Rails plugin
+
+Plug 'airblade/vim-gitgutter'     " Show git diff of lines edited
+Plug 'tpope/vim-fugitive'         " :Gblame
+
+Plug 'tpope/vim-endwise'          " Autocomplete end after a do
+Plug 'mileszs/ack.vim'            " Use ack in Vim
+Plug 'prettier/vim-prettier'      " Code formatter
+
+Plug 'Quramy/tsuquyomi'           " TypeScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'ianks/vim-tsx'              " TypeScript and JSX syntax
+Plug 'chemzqm/vim-jsx-improve'    " JS and JSX syntax
+Plug 'vim-airline/vim-airline'    " Vim powerline
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'         " Set up fzf and fzf.vim
+Plug 'junegunn/fzf.vim'           " Set up fzf and fzf.vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " All of your Plugins must be added before the following line
 call plug#end()              " required
@@ -30,8 +35,6 @@ let mapleader = " "
 syntax enable
 set background=dark
 set wildmenu " when opening a file with e.g. :e ~/.vim<TAB> there is a graphical menu of all the matches
-let g:jsx_ext_required = 0 " enable JSX syntax highlight in .js files
-set re=1 " Use old regex since it's faster for Ruby
 set ttyfast
 set lazyredraw
 
@@ -123,6 +126,9 @@ nnoremap <silent><leader>/ :split<CR>
 nnoremap <silent><leader>w :w!<CR>
 nnoremap <silent><leader>q :q!<CR>
 nnoremap <silent><leader>x :x<CR>
+" Open Vim configuration file for editing
+nnoremap <silent><leader>2 :e ~/.vimrc<CR>
+" Source Vim configuration file and install plugins
 nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>
 
 " Map fzf search to CTRL P
@@ -145,5 +151,11 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
 " Switch between buffers
-:nnoremap <C-n> :bnext<CR>
+:nnoremap <C-n> :NERDTreeToggle<CR>
 :nnoremap <C-d> :bdelete<CR>
+
+" Enable deoplete on startup
+let g:deoplete#enable_at_startup = 1
+
+" CoC extensions
+let g:coc_global_extensions = ['coc-solargraph', 'coc-tsserver', 'coc-json']
