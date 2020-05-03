@@ -12,16 +12,18 @@ Plug 'tpope/vim-fugitive'         " :Gblame
 
 Plug 'tpope/vim-endwise'          " Autocomplete end after a do
 Plug 'mileszs/ack.vim'            " Use ack in Vim
-Plug 'prettier/vim-prettier'      " Code formatter
 
-Plug 'Quramy/tsuquyomi'           " TypeScript support
+Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
-Plug 'ianks/vim-tsx'              " TypeScript and JSX syntax
-Plug 'chemzqm/vim-jsx-improve'    " JS and JSX syntax
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'jparise/vim-graphql'        " GraphQL syntax
+Plug 'styled-components/vim-styled-components'
+
 Plug 'vim-airline/vim-airline'    " Vim powerline
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'           " Set up fzf and fzf.vim
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " All of your Plugins must be added before the following line
@@ -37,6 +39,7 @@ set background=dark
 set wildmenu " when opening a file with e.g. :e ~/.vim<TAB> there is a graphical menu of all the matches
 set ttyfast
 set lazyredraw
+set updatetime=300
 
 " Numbers
 set number
@@ -131,6 +134,8 @@ nnoremap <silent><leader>2 :e ~/.vimrc<CR>
 " Source Vim configuration file and install plugins
 nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>
 
+" If fzf installed using git
+set rtp+=~/.fzf
 " Map fzf search to CTRL P
 nnoremap <C-p> :GFiles<Cr>
 " Map fzf + ag search to CTRL P
@@ -151,11 +156,30 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
 " Switch between buffers
-:nnoremap <C-n> :NERDTreeToggle<CR>
 :nnoremap <C-d> :bdelete<CR>
-
-" Enable deoplete on startup
-let g:deoplete#enable_at_startup = 1
 
 " CoC extensions
 let g:coc_global_extensions = ['coc-solargraph', 'coc-tsserver', 'coc-json']
+
+" Add CoC Prettier if prettier is installed
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+" Add CoC ESLint if ESLint is installed
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Show autocomplete when Tab is pressed
+inoremap <silent><expr> <Tab> coc#refresh()
