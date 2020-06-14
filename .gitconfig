@@ -29,6 +29,7 @@
   rbc  = rebase --continue
   rbs  = rebase --skip
   rba  = rebase --abort
+  cln  = !git branch | grep -v 'master' | xargs git branch -D
 
 [color]
   diff   = auto
