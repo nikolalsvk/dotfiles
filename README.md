@@ -1,10 +1,10 @@
-[![Build Status](https://semaphoreci.com/api/v1/nikolalsvk/dotfiles/branches/master/badge.svg)](https://semaphoreci.com/nikolalsvk/dotfiles)
+<p align="center">
+  <h1 align="center">👋 Welcome to my dotfiles 📚</h1>
 
-# nikolalsvk dotfiles
-
-![Vim pic](https://vim.sexy/img/Vimlogo.svg)
-
-![Git pic](https://git-scm.com/images/logo@2x.png)
+  <p align="center">
+    <img alt="Vim logo" src="https://vim.sexy/img/Vimlogo.svg" style="height: 300px; width: auto;" />
+  </p>
+</p>
 
 ### :arrow_down: Installation:
 
