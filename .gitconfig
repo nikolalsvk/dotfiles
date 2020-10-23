@@ -20,8 +20,9 @@
   lg   = log --pretty=format:'%C(yellow)%h%Creset %Cgreen(%><(12)%cr%><|(12))%Creset - %s %C(blue)<%an>%Creset'
   pl   = pull
   ps   = push
-  f    = fetch
+  psf  = push --force-with-lease
   undo = reset --soft HEAD^
+  f    = fetch
   sta  = stash
   stap = stash apply
   uall = reset .
@@ -62,3 +63,6 @@
 
 [commit]
   gpgsign = true
+
+[diff]
+  colorMoved = default
