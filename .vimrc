@@ -134,6 +134,9 @@ nnoremap <silent><leader>2 :e ~/.vimrc<CR>
 " Source Vim configuration file and install plugins
 nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>
 
+" Toggle relative line numbers
+nnoremap <leader>rn :set relativenumber!<cr>
+
 " If fzf installed using git
 set rtp+=~/.fzf
 " Map fzf search to CTRL P
@@ -144,7 +147,6 @@ nnoremap <C-g> :Ag<Cr>
 " vim-test shortcut for running tests
 nnoremap <silent><leader>; :TestNearest<CR>
 nnoremap <silent><leader>' :TestFile<CR>
-let test#ruby#rspec#executable = 'spring rspec'
 
 " Extra <CR> is for disabling /"Press ENTER or type command to continue/"
 nnoremap <silent><leader>e :Exp<CR><CR>
@@ -154,9 +156,6 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
-
-" Switch between buffers
-:nnoremap <C-d> :bdelete<CR>
 
 " CoC extensions
 let g:coc_global_extensions = ['coc-solargraph', 'coc-tsserver', 'coc-json']
@@ -176,10 +175,9 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Remap keys for applying codeAction to the current line.
+" Remap keys for applying codeAction to the current buffer.
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
-" Show autocomplete when Tab is pressed
-inoremap <silent><expr> <Tab> coc#refresh()
+let g:fugitive_pty = 0
