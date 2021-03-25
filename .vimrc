@@ -9,6 +9,7 @@ Plug 'nikolalsvk/vim-rails'       " Rails plugin
 
 Plug 'airblade/vim-gitgutter'     " Show git diff of lines edited
 Plug 'tpope/vim-fugitive'         " :Gblame
+Plug 'tpope/vim-rhubarb'          " :GBrowse
 
 Plug 'tpope/vim-endwise'          " Autocomplete end after a do
 Plug 'mileszs/ack.vim'            " Use ack in Vim
