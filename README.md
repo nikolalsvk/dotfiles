@@ -13,24 +13,30 @@
 
 ### :arrow_down: Installation:
 
+Get started quickly:
+
 1. Clone the repo
 
-```
-git clone https://github.com/nikolalsvk/dotfiles.git
-```
+  ```bash
+  git clone https://github.com/nikolalsvk/dotfiles.git
+  ```
 
 2. Get into the repo and run the install script
 
-```
-cd dotfiles && ./install.rb
-```
+  ```bash
+  cd dotfiles && ./install.rb
+  ```
 
 3. Add theme colors to iTerm (optional)
 
-I use [Honukai theme](https://github.com/oskarkrawczyk/honukai-iterm-zsh)
+  I use [Honukai theme](https://github.com/oskarkrawczyk/honukai-iterm-zsh) if
+  you're interested in having the similar visual appearance.
 
-You need to download [honukai.itermcolors](https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.itermcolors)
-to Colors tab in iTerm to achieve the same colors.
+  You need to download [honukai.itermcolors](https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.itermcolors)
+  to Colors tab in iTerm to achieve the same colors.
+
+That is it. If you find something broken or worth fixing, create an issue and /
+or a pull request and let's make it better.
 
 ### :mag: It includes:
 
@@ -41,4 +47,4 @@ to Colors tab in iTerm to achieve the same colors.
 
 :warning: Use it at your peril. :warning:
 
-:radio: Pull request are welcome :)
+:radio: Pull request are (very) welcome.
