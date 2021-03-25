@@ -6,9 +6,8 @@
    <img alt="Nikola's terminal in the wild" src="https://raw.githubusercontent.com/nikolalsvk/dotfiles/master/dotfiles-in-the-wild.png" />
   </p>
 
-  <h3 align="center">⌨️ A picture of the best editor out there</h3>
   <p align="center">
-    <img alt="Vim logo" src="https://vim.sexy/img/Vimlogo.svg" style="height: 300px; width: auto;" />
+    <img alt="Vim logo" src="https://vim.sexy/img/Vimlogo.svg" style="height: 150px; width: auto;" />
   </p>
 </p>
 
