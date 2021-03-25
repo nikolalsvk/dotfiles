@@ -143,7 +143,7 @@ set rtp+=~/.fzf
 " Map fzf search to CTRL P
 nnoremap <C-p> :GFiles<Cr>
 " Map fzf + ag search to CTRL P
-nnoremap <C-g> :Ag<Cr>
+nnoremap <C-g> :Ag <Cr>
 
 " vim-test shortcut for running tests
 nnoremap <silent><leader>; :TestNearest<CR>
@@ -181,4 +181,23 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
+" Format
+nmap <leader>f   :CocCommand prettier.formatFile<CR>
+
+" Fix some weird error with Fugitive
 let g:fugitive_pty = 0
+
+" Change cursor to solid vertical line
+" There are problems with Vim's floating window setting cursor to a solid
+" block. So these lines below are resetting it to a solid vertical line.
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[6 q"
+
+" Optionally reset the cursor on start:
+augroup myCmds
+au!
+autocmd VimEnter * silent !echo -ne "\e[6 q"
+augroup END
+
+" Fix syntax highlight for Coc plugin floating errors
+hi CocErrorFloat guifg=Magenta guibg=Magenta
