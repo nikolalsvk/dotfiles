@@ -8,7 +8,6 @@ alias bem="bundle exec rake db:migrate"
 
 # Git
 alias g="git"
-alias pr="hub pull-request"
 
 # Docker
 alias dc="docker-compose"
