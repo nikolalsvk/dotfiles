@@ -22,7 +22,7 @@ alias hg='history | grep'
 kill_port() {
   if [ -n "$1" ]
   then
-    lsof -ti :"$1" | xargs kill
+    lsof -ti :"$1" | xargs kill -9
   else
     echo "Pass in port number."
   fi
