@@ -41,6 +41,10 @@ set wildmenu " when opening a file with e.g. :e ~/.vim<TAB> there is a graphical
 set ttyfast
 set lazyredraw
 set updatetime=300
+set hidden " Open other files if current one is not saved
+
+" Enable Mouse mode in all modes
+set mouse=a
 
 " Numbers
 set number
