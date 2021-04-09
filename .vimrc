@@ -25,7 +25,7 @@ Plug 'vim-airline/vim-airline'    " Vim powerline
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'           " Set up fzf and fzf.vim
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " All of your Plugins must be added before the following line
 call plug#end()              " required
