@@ -51,11 +51,11 @@ else
 end
 
 print_cyan "Copying .vimrc to ~/.vimrc"
-`cp .vimrc ~/.vimrc`
+`cp -i .vimrc ~/.vimrc`
 print_cyan "Copying .gitconfig to ~/.gitconfig"
-`cp .gitconfig ~/.gitconfig`
+`cp -i .gitconfig ~/.gitconfig`
 print_cyan "Copying .zsh-aliases to ~/.zsh-aliases"
-`cp .zsh-aliases ~/.zsh-aliases`
+`cp -i .zsh-aliases ~/.zsh-aliases`
 
 if File.readlines(path("~/.zshrc")).grep(/zsh-aliases/).size == 0
   print_cyan "Adding .zsh-aliases to ~/.zshrc"
