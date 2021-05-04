@@ -205,3 +205,6 @@ augroup END
 
 " Fix syntax highlight for Coc plugin floating errors
 hi CocErrorFloat guifg=Magenta guibg=Magenta
+
+" Use templates https://vimtricks.com/p/automated-file-templates/
+autocmd BufNewFile *.tsx 0r ~/Documents/dotfiles/skeletons/typescript-react.tsx
