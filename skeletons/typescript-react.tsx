@@ -1,6 +1,8 @@
 import React from "react";
 
-const NewComponent = () => {
+interface Props {}
+
+const NewComponent = (props: Props) => {
   return (
     <>
       <div></div>
