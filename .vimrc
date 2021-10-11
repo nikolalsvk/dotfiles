@@ -207,8 +207,8 @@ augroup END
 hi CocErrorFloat guifg=Magenta guibg=Magenta
 
 " Use templates https://vimtricks.com/p/automated-file-templates/
-autocmd BufNewFile *.tsx             0r ~/Documents/dotfiles/skeletons/typescript-react.tsx
-autocmd BufNewFile *.test.tsx         0r ~/Documents/dotfiles/skeletons/typescript-react.test.tsx
+autocmd BufNewFile *.test.tsx        0r ~/Documents/dotfiles/skeletons/react-typescript.test.tsx
+autocmd BufNewFile *\(test\)\@<!.tsx 0r ~/Documents/dotfiles/skeletons/react-typescript.tsx
 autocmd BufNewFile *content/blog*.md 0r ~/Documents/dotfiles/skeletons/blog-post.md
 autocmd BufNewFile *.sh              0r ~/Documents/dotfiles/skeletons/script.sh
 autocmd BufNewFile *.html            0r ~/Documents/dotfiles/skeletons/page.html
