@@ -39,7 +39,7 @@
   ui     = true
 
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = /Users/nikolalsvk/.gitignore_global
   editor       = vim
   whitespace   = cr-at-eol
 
@@ -57,6 +57,7 @@
 
 [pull]
   default = current
+  rebase = true
 
 [push]
   default = current

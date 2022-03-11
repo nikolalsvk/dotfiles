@@ -27,6 +27,8 @@ Plug 'junegunn/fzf.vim'           " Set up fzf and fzf.vim
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
+Plug 'vimwiki/vimwiki'
+
 " All of your Plugins must be added before the following line
 call plug#end()              " required
 filetype plugin indent on    " required
@@ -77,9 +79,11 @@ nmap z za
 set noerrorbells visualbell t_vb=
 
 " Ack tricks
-let g:ackprg = 'ag --vimgrep'
-nmap <leader>a :Ack! ""<Left>
-nmap <leader>A :Ack! "\b<cword>\b"<CR>
+let g:ackprg = 'rg --vimgrep --smart-case --hidden'
+" Any empty ack search will search for the work the cursor is on
+let g:ack_use_cword_for_empty_search = 1
+nmap <leader>a :Ack!<Space>
+nmap <leader>A :Ack! <cword><CR>
 
 " Tab Options
 set shiftwidth=2
@@ -181,7 +185,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>c  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
