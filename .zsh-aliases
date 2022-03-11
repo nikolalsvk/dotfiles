@@ -24,6 +24,16 @@ kill_port() {
   then
     lsof -ti :"$1" | xargs kill -9
   else
-    echo "Pass in port number."
+    echo "Pass in the port number."
   fi
+}
+
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf "$@" --preview 'tree -C {} | head -200' ;;
+    *)            fzf "$@" ;;
+  esac
 }
