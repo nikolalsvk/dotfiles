@@ -19,6 +19,7 @@ alias cy="yarn cy:open"
 # Utility
 alias hg='history | grep'
 
+# Kill a process on a specified port
 kill_port() {
   if [ -n "$1" ]
   then
@@ -28,6 +29,7 @@ kill_port() {
   fi
 }
 
+# Customize how fzf handles certain commands
 _fzf_comprun() {
   local command=$1
   shift
