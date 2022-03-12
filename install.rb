@@ -25,18 +25,18 @@ else
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 end
 
-print_cyan "Checking if ag exists..."
-if Dir.exists? path("/usr/local/Cellar/the_silver_searcher/")
-  print_green "You already have ag, awesome!"
+print_cyan "Checking if rg exists..."
+if `which rg`.include? "not found"
+  print_red "Nope, installing rg (ripgrep)"
+  `brew install ripgrep`
 else
-  print_red "Nope, installing ag"
-  `brew install the_silver_searcher`
+  print_green "You already have rg, awesome!"
 end
 
 print_cyan "Checking if zsh is installed"
 if `which zsh`.include? "not found"
-  print_red "Nope, installing zsh"
-  `sudo apt-get install zsh`
+  print_red "Nope, installing zsh and oh-my-zsh"
+  `brew install zsh`
   `sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
 else
   print_green "You already have zsh, awesome!"
