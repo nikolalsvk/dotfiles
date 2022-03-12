@@ -27,8 +27,6 @@ Plug 'junegunn/fzf.vim'           " Set up fzf and fzf.vim
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
-Plug 'vimwiki/vimwiki'
-
 " All of your Plugins must be added before the following line
 call plug#end()              " required
 filetype plugin indent on    " required
@@ -151,7 +149,7 @@ set rtp+=~/.fzf
 " Map fzf search to CTRL P
 nnoremap <C-p> :GFiles<Cr>
 " Map fzf + ag search to CTRL P
-nnoremap <C-g> :Ag <Cr>
+nnoremap <C-g> :Rg <Cr>
 
 " vim-test shortcut for running tests
 nnoremap <silent><leader>; :TestNearest<CR>
