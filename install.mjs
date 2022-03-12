@@ -39,20 +39,14 @@ if (fs.exists("~/.oh-my-zsh/themes/honukai.zsh-theme")) {
   await $`wget -P ~/.oh-my-zsh/themes "https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.zsh-theme"`;
 }
 
-try {
-  console.log(chalk.blue("Copying .vimrc to ~/.vimrc"));
-  await $`cp -i .vimrc ~/.vimrc`;
-} catch {}
+console.log(chalk.blue("Copying .vimrc to ~/.vimrc"));
+await nothrow($`cp -i .vimrc ~/.vimrc`);
 
-try {
-  console.log(chalk.blue("Copying .gitconfig to ~/.gitconfig"));
-  await $`cp -i .gitconfig ~/.gitconfig`;
-} catch {}
+console.log(chalk.blue("Copying .gitconfig to ~/.gitconfig"));
+await nothrow($`cp -i .gitconfig ~/.gitconfig`);
 
-try {
-  console.log(chalk.blue("Copying .zsh-aliases to ~/.zsh-aliases"));
-  await $`cp -i .zsh-aliases ~/.zsh-aliases`;
-} catch {}
+console.log(chalk.blue("Copying .zsh-aliases to ~/.zsh-aliases"));
+await nothrow($`cp -i .zsh-aliases ~/.zsh-aliases`);
 
 fs.readFile(`${os.homedir()}/.zshrc`, async (err, data) => {
   if (err) throw err;
