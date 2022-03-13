@@ -1,7 +1,9 @@
 #!/usr/bin/env zx
 
+const homeDir = os.homedir();
+
 console.log(chalk.blue("Checking if vim-plug exists..."));
-if (fs.exists(`${os.homedir()}/.vim/autoload/plug.vim`)) {
+if (fs.exists(`${homeDir}/.vim/autoload/plug.vim`)) {
   console.log(chalk.green("You already have vim-plug, awesome!"));
 } else {
   console.log(chalk.red("Nope, installing vim-plug"));
@@ -13,6 +15,7 @@ if (fs.exists(`${os.homedir()}/.vim/autoload/plug.vim`)) {
 console.log(chalk.blue("Checking if rg exists..."));
 try {
   await $`which rg`;
+  console.log(chalk.green("You already have rg, awesome!"));
 } catch {
   console.log(chalk.red("Nope, installing rg (rigrep)"));
 
@@ -32,7 +35,7 @@ try {
 }
 
 console.log(chalk.blue("Checking if honukai theme is installed"));
-if (fs.exists("~/.oh-my-zsh/themes/honukai.zsh-theme")) {
+if (fs.exists(`${homeDir}/.oh-my-zsh/themes/honukai.zsh-theme`)) {
   console.log(chalk.green("You already have honukai theme, awesome!"));
 } else {
   console.log(chalk.red("Nope, installing honukai theme"));
@@ -48,7 +51,7 @@ await nothrow($`cp -i .gitconfig ~/.gitconfig`);
 console.log(chalk.blue("Copying .zsh-aliases to ~/.zsh-aliases"));
 await nothrow($`cp -i .zsh-aliases ~/.zsh-aliases`);
 
-fs.readFile(`${os.homedir()}/.zshrc`, async (err, data) => {
+fs.readFile(`${homeDir}/.zshrc`, async (err, data) => {
   if (err) throw err;
   if (data.includes("zsh-aliases")) {
     console.log(
