@@ -27,6 +27,12 @@ Get started quickly:
    cd dotfiles && ./install.rb
    ```
 
+   Or, you can do it via zx using:
+
+   ```bash
+   npx zx install.mjs
+   ```
+
 3. Add theme colors to iTerm (optional)
 
    I use [Honukai theme](https://github.com/oskarkrawczyk/honukai-iterm-zsh) if
