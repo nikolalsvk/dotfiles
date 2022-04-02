@@ -35,11 +35,18 @@ end
 
 print_cyan "Checking if zsh is installed"
 if `which zsh`.include? "not found"
-  print_red "Nope, installing zsh and oh-my-zsh"
+  print_red "Nope, installing zsh"
   `brew install zsh`
-  `sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
 else
   print_green "You already have zsh, awesome!"
+end
+
+print_cyan "Checking if oh-my-zsh is installed"
+if File.exists? path("~/.oh-my-zsh")
+  print_green "You already have oh-my-zsh, awesome!"
+else
+  print_red "Nope, installing oh-my-zsh"
+  `sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
 end
 
 print_cyan "Checking if honukai theme is installed"
