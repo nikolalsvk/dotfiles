@@ -23,14 +23,21 @@ try {
 }
 
 console.log(chalk.blue("Checking if zsh is installed"));
-
 try {
   await $`which zsh`;
   console.log(chalk.green("You already have zsh, awesome!"));
 } catch (p) {
-  console.log(chalk.red("Nope, installing zsh and oh-my-zsh"));
+  console.log(chalk.red("Nope, installing zsh"));
 
   await $`brew install zsh`;
+}
+
+console.log(chalk.blue("Checking if oh-my-zsh is installed"));
+if (fs.exists(`${homeDir}/.oh-my-zsh/themes/README.md`)) {
+  console.log(chalk.green("You already have oh-my-zsh, awesome!"));
+} else {
+  console.log(chalk.red("Nope, installing oh-my-zsh"));
+
   await $`sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`;
 }
 
