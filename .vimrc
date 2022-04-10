@@ -27,6 +27,8 @@ Plug 'junegunn/fzf.vim'           " Set up fzf and fzf.vim
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
+Plug 'psliwka/vim-smoothie'       " Smooth scrolling
+
 " All of your Plugins must be added before the following line
 call plug#end()              " required
 filetype plugin indent on    " required
