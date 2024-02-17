@@ -1,0 +1,5 @@
+{
+  "coc.preferences.formatOnSave": true,
+  "volar.enable": true,
+  "eslint.autoFixOnSave": true
+}
