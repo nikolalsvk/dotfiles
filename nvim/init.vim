@@ -4,20 +4,13 @@ filetype off     " required
 " Keep Plug commands between plug#begin() and plug#end().
 call plug#begin()
 
-Plug 'janko/vim-test'             " Run Ruby and Elixir tests
-Plug 'nikolalsvk/vim-rails'       " Rails plugin
-
 Plug 'airblade/vim-gitgutter'     " Show git diff of lines edited
 Plug 'tpope/vim-fugitive'         " :Gblame
 Plug 'tpope/vim-rhubarb'          " :GBrowse
 
-Plug 'tpope/vim-endwise'          " Autocomplete end after a do
 Plug 'mileszs/ack.vim'            " Use ack in Vim
 
-" Plug 'pangloss/vim-javascript'    " JavaScript support
-" Plug 'leafgarland/typescript-vim' " TypeScript syntax
-" Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
-" Plug 'jparise/vim-graphql'        " GraphQL syntax
+Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'styled-components/vim-styled-components'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -180,7 +173,7 @@ onoremap q i'
 onoremap Q i"
 
 " CoC extensions
-let g:coc_global_extensions = ['coc-solargraph', 'coc-tsserver', 'coc-json']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json']
 
 " Add CoC Prettier if prettier is installed
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
