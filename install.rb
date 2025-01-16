@@ -17,7 +17,7 @@ def path(filepath)
 end
 
 print_cyan "Checking if vim-plug exists..."
-if File.exists? path("~/.vim/autoload/plug.vim")
+if File.exist? path("~/.vim/autoload/plug.vim")
   print_green "You already have vim-plug, awesome!"
 else
   print_red "Nope, installing vim-plug"
@@ -42,7 +42,7 @@ else
 end
 
 print_cyan "Checking if oh-my-zsh is installed"
-if File.exists? path("~/.oh-my-zsh")
+if File.exist? path("~/.oh-my-zsh")
   print_green "You already have oh-my-zsh, awesome!"
 else
   print_red "Nope, installing oh-my-zsh"
@@ -50,7 +50,7 @@ else
 end
 
 print_cyan "Checking if honukai theme is installed"
-if File.exists? path("~/.oh-my-zsh/themes/honukai.zsh-theme")
+if File.exist? path("~/.oh-my-zsh/themes/honukai.zsh-theme")
   print_green "You already have honukai theme, awesome!"
 else
   print_red "Nope, installing honukai theme"
